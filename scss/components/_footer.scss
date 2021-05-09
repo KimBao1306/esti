@@ -1,0 +1,158 @@
+.footer {
+	margin-top: auto;
+	color: $t-w-cl;
+	font-size: 1.6rem;
+	&-wrap {
+		background: rgba($color: #0a2158, $alpha: 0.7) url(../images/footer-bg.png)
+			no-repeat center;
+		background-size: cover;
+		background-blend-mode: multiply;
+	}
+	&-top {
+		.container {
+			width: 157rem;
+		}
+	}
+	&-bottom {
+		border-top: 1px solid rgba($color: $bg-w-cl, $alpha: 0.2);
+	}
+}
+.footer-logo {
+	.logo {
+		max-width: 18.602rem;
+	}
+	.desc {
+		@include lh(26, 16);
+	}
+}
+.footer-top-wrap {
+	.cols {
+		margin-left: -6rem;
+		margin-right: -6rem;
+	}
+	.col {
+		padding-left: 6rem;
+		padding-right: 6rem;
+		width: 25%;
+	}
+}
+.footer-item {
+	.title {
+		text-transform: uppercase;
+		font-weight: bold;
+		color: $main-cl;
+		margin-bottom: 0.5rem;
+	}
+	.sub-title {
+		font-weight: bold;
+		text-transform: uppercase;
+		margin-bottom: 3rem;
+	}
+}
+.footer-list {
+	@include lh(36, 16);
+	a {
+		position: relative;
+		padding-bottom: 0.3rem;
+		&:before {
+			content: '\f105';
+			font-family: FA;
+			color: $four-cl;
+			margin-right: 0.8rem;
+			transition: $t1;
+		}
+		&:after {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			width: 0;
+			height: 0.1rem;
+			background-color: $bg-w-cl;
+			transition: $t1;
+		}
+		&:hover {
+			color: $t-w-cl;
+			&:before {
+				color: $t-w-cl;
+			}
+			&:after {
+				right: auto;
+				left: 0;
+				width: 100%;
+			}
+		}
+	}
+}
+.footer-info {
+	p {
+		font-weight: 500;
+		@include lh(34, 16);
+	}
+	a {
+		transition: $t1;
+		&:hover {
+			color: $four-cl;
+		}
+	}
+	img {
+		display: inline-block;
+	}
+	li:last-child {
+		margin-top: 2.5rem;
+		display: flex;
+		a:first-child {
+			margin-right: 1rem;
+		}
+	}
+}
+.footer-author {
+	text-align: center;
+	padding: 2rem 0;
+	a,
+	img {
+		display: inline-block;
+	}
+}
+@include max-media($bk-d-1600) {
+	.footer-top-wrap {
+		.cols {
+			margin: -1.5rem;
+		}
+		.col {
+			padding: 1.5rem;
+		}
+	}
+}
+@include max-media($bk-d-1200) {
+	.footer-top-wrap {
+		.col {
+			width: 50%;
+		}
+	}
+	.footer-item {
+		.sub-title {
+			margin-bottom: 1rem;
+		}
+	}
+}
+@include max-media($bk-d-992) {
+	.footer-info {
+		li:last-child {
+			margin-top: 1rem;
+		}
+	}
+}
+@include max-media($bk-d-768) {
+	.footer-top-wrap {
+		.cols {
+			margin-left: -0.75rem;
+			margin-right: -0.75rem;
+		}
+		.col {
+			padding-left: 0.75rem;
+			padding-right: 0.75rem;
+			width: 100%;
+		}
+	}
+}

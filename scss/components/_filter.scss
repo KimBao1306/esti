@@ -1,0 +1,156 @@
+.filter {
+	position: sticky;
+	top: 10rem;
+	@include max-media($bk-d-1200) {
+		position: fixed;
+		top: 0;
+		left: -100%;
+		z-index: 902;
+		height: calc(var(--browser-vh, 1vh) * 100);
+		width: 100%;
+		transition: $t1;
+		.filter-wrap {
+			position: relative;
+			z-index: 903;
+			width: 30rem;
+			height: 100%;
+			background-color: $bg-w-cl;
+			padding: 1.5rem;
+			overflow-y: auto;
+			@include custom-scrollbar(0.3rem);
+		}
+		&.--active {
+			left: 0;
+		}
+	}
+}
+.filter-mobile {
+	position: absolute;
+	top: 0;
+	right: -1.5rem;
+	height: 100%;
+	display: none;
+	pointer-events: none;
+	&-wrap {
+		position: sticky;
+		top: 10rem;
+		right: 0;
+		z-index: 10;
+		padding: 0.5rem;
+		background-color: $main-cl;
+		border-radius: 0.6rem 0 0 0.6rem;
+		writing-mode: vertical-lr;
+		text-align: center;
+		min-height: 10rem;
+		min-width: 3rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		transition: $t1;
+		box-shadow: 1rem 1rem 3rem rgba($color: $bg-b-cl, $alpha: 0.16);
+		pointer-events: auto;
+		p {
+			color: #fff;
+			font-size: 1.2rem;
+			font-weight: bold;
+			text-transform: uppercase;
+			text-align: center;
+			vertical-align: middle;
+		}
+	}
+	@include max-media($bk-d-1200) {
+		display: block;
+	}
+}
+.filter-item {
+	.tt {
+		padding-bottom: 1rem;
+		border-bottom: 1px solid $main-cl;
+	}
+	&-list {
+		.sub-tt {
+			font-weight: bold;
+			margin-bottom: 1.5rem;
+		}
+		ul {
+			padding-left: 2.5rem;
+		}
+
+		li {
+			~ li {
+				margin-top: 1.5rem;
+			}
+			&.--active {
+				color: $four-cl;
+				font-weight: bold;
+				a {
+					color: $four-cl;
+				}
+			}
+		}
+		~ .filter-item-list {
+			margin-top: 2.5rem;
+			padding-top: 2.5rem;
+			border-top: 1px solid $border-cl;
+		}
+	}
+	~ .filter-item {
+		margin-top: 3rem;
+	}
+	@include max-media($bk-d-992) {
+	}
+}
+.filter-search {
+	position: relative;
+	margin-bottom: 1.5rem;
+	.f-submit {
+		position: absolute;
+		top: 0;
+		right: 0;
+		height: 100%;
+		width: 3rem;
+		border: 0;
+		outline: none;
+		background-color: transparent;
+		cursor: pointer;
+	}
+}
+.filter-cate {
+	a {
+		color: $main-cl;
+		&:hover {
+			color: $second-cl;
+		}
+	}
+	.badge {
+		font-weight: 600;
+		color: $t-b-cl;
+	}
+}
+.filter-doc.filter-doc,
+.filter-account.filter-account {
+	padding-left: 0;
+
+	a {
+		position: relative;
+		color: $desc-cl;
+		&:before {
+			color: $main-cl;
+			content: '\f105';
+			font-family: FA;
+			display: inline-block;
+
+			margin-right: 1rem;
+		}
+		&:hover {
+			color: $four-cl;
+		}
+	}
+}
+.filter-account {
+	a {
+		text-transform: uppercase;
+	}
+}
+.filter-branch {
+}

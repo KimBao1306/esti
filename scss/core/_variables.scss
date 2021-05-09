@@ -1,0 +1,49 @@
+/*primary colors*/
+$w-cl: #fff;
+$b-cl: #000;
+$gray-cl: #898989;
+/*primary text colors*/
+$t-w-cl: #fff;
+$t-b-cl: #000;
+/*primary bg colors*/
+$bg-w-cl: #fff;
+$bg-b-cl: #000;
+/*main color design*/
+$main-cl: #125daa;
+$second-cl: #02194f;
+$third-cl: #f8f8f8;
+$four-cl: #1aac55;
+$border-cl: #e1e1e1;
+$desc-cl: rgba(0, 0, 0, 0.6);
+/*time transition*/
+$t1: 0.3s;
+$t2: 0.6s;
+$t3: 1s;
+$cubic1: cubic-bezier(0.61, 0.22, 0.23, 1);
+$cubic2: cubic-bezier(0.63, -0.02, 0.24, 1.12);
+/*break points - desktop frist*/
+$bk-1600: 1600px;
+$bk-1200: 1200px;
+$bk-992: 992px;
+$bk-768: 768px;
+$bk-600: 600px;
+/*BREAK POINTS - BK - 1*/
+$bk-d-1600: $bk-1600 - 1;
+$bk-d-1200: $bk-1200 - 1;
+$bk-d-992: $bk-992 - 1;
+$bk-d-768: $bk-768 - 1;
+$bk-d-600: $bk-600 - 1;
+/*font families*/
+$fz-base: 10px;
+$font-body: 'Montserrat', sans-serif;
+$fz-body: 1.4rem;
+$lh-body: 1.4;
+$cl-body: #000000;
+$font-title: 'SF Pro Display', sans-serif;
+$font-title-2: 'Be Vietnam', sans-serif;
+/*width*/
+$w-scroll: 0px;
+$max-width: 100%;
+$container-full-width: 192rem;
+$container-width: 120rem;
+$padding: 1.5rem;

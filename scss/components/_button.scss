@@ -1,0 +1,231 @@
+.main-btn {
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	padding: 1.2rem 2.4rem;
+	font-weight: 600;
+	color: $t-w-cl;
+	background-color: $main-cl;
+	text-transform: uppercase;
+	z-index: 1;
+	overflow: hidden;
+	cursor: pointer;
+	transition: $t1 $cubic1;
+	outline: none;
+	border: 0;
+	font-size: 1.4rem;
+	font-family: $font-body;
+	text-align: center;
+	.btn-hover {
+		position: absolute;
+		top: var(--y);
+		left: var(--x);
+		transform: translate(-50%, -50%);
+		width: 0;
+		height: 0;
+		border-radius: 99rem;
+		transition: width $t1 ease-in-out, height $t1 ease-in-out;
+		background-color: rgba($color: $second-cl, $alpha: 0.6);
+		z-index: -1;
+		pointer-events: none;
+	}
+	&:disabled,
+	&:disabled:hover {
+		cursor: not-allowed;
+		color: initial;
+	}
+	&:hover {
+		color: $t-w-cl;
+		box-shadow: 1rem 1rem 3rem rgba($color: $bg-b-cl, $alpha: 0.16);
+		background-color: $second-cl;
+		.btn-hover {
+			width: 50rem;
+			height: 50rem;
+		}
+	}
+	&:active {
+		background-color: rgba($color: $second-cl, $alpha: 0.6);
+	}
+	&.btn-bg-second {
+		background-color: $second-cl;
+		&:hover {
+			background-color: $main-cl;
+		}
+	}
+	&.btn-bg-third {
+		background-color: #dbe3f4;
+		color: $main-cl;
+		&:hover {
+			background-color: $second-cl;
+			color: $t-w-cl;
+		}
+	}
+	&.btn-bg-four {
+		background-color: $four-cl;
+		&:hover {
+			background-color: $bg-w-cl;
+			color: $four-cl;
+		}
+	}
+	&.btn-bg-white {
+		background-color: $bg-w-cl;
+		color: $main-cl;
+		&:hover {
+			background-color: $second-cl;
+			color: $t-w-cl;
+		}
+	}
+	&.btn-border {
+		border: 1px solid;
+	}
+}
+
+.readmore-btn {
+	font-weight: bold;
+	color: $b-cl;
+	@include lh(20, 15);
+	&:hover {
+		color: $second-cl;
+	}
+}
+
+.btn-detail {
+	display: inline-block;
+	padding: 1.1rem 1.4rem;
+	border-radius: 0.4rem;
+	background-color: #9db7e6;
+	font-weight: 500;
+	transition: $t1;
+	width: 100%;
+	text-align: center;
+	&:hover {
+		background-color: $main-cl;
+		color: $t-w-cl;
+	}
+	&.btn-border {
+		border: 1px solid $main-cl;
+		background-color: $bg-w-cl;
+		border-radius: 0;
+		&:hover {
+			background-color: $main-cl;
+		}
+	}
+}
+.hamburger-btn {
+	position: relative;
+	z-index: 901;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 3.5rem;
+	height: 3.5rem;
+	cursor: pointer;
+	.bar {
+		position: relative;
+		background: $bg-w-cl;
+		transition: all 0ms 300ms;
+		&,
+		&::before,
+		&::after {
+			width: 3.5rem;
+			height: 0.3rem;
+		}
+		&::before,
+		&::after {
+			content: '';
+			position: absolute;
+			left: 0;
+			background: $bg-w-cl;
+		}
+		&::before {
+			bottom: 1rem;
+			transition: bottom $t1 $t1 cubic-bezier(0.23, 1, 0.32, 1),
+				transform $t1 cubic-bezier(0.23, 1, 0.32, 1);
+		}
+		&::after {
+			top: 1rem;
+			transition: top $t1 $t1 cubic-bezier(0.23, 1, 0.32, 1),
+				transform $t1 cubic-bezier(0.23, 1, 0.32, 1);
+		}
+	}
+	&.--active {
+		.bar {
+			background: rgba(255, 255, 255, 0);
+			&::before {
+				bottom: 0;
+				transform: rotate(-45deg);
+				background-color: #fff;
+				transition: bottom $t1 cubic-bezier(0.23, 1, 0.32, 1),
+					transform $t1 $t1 cubic-bezier(0.23, 1, 0.32, 1);
+			}
+			&::after {
+				top: 0;
+				transform: rotate(45deg);
+				background-color: #fff;
+				transition: top $t1 cubic-bezier(0.23, 1, 0.32, 1),
+					transform $t1 $t1 cubic-bezier(0.23, 1, 0.32, 1);
+			}
+		}
+	}
+}
+
+.video-btn,
+.video-popup {
+	display: block;
+	position: relative;
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(#000, 0.5);
+		z-index: 2;
+		pointer-events: none;
+	}
+	&:after {
+		content: '';
+		@include mid;
+		width: 4rem;
+		height: 4rem;
+		background-image: url(../images/video-btn.png);
+		background-size: 4rem auto;
+		background-repeat: no-repeat;
+		background-position: center center;
+		z-index: 2;
+		border-radius: 99rem;
+		animation: pulse 3s infinite;
+	}
+	img {
+		width: 100%;
+		height: auto;
+		pointer-events: auto;
+		cursor: pointer;
+	}
+}
+
+.scroll-top {
+	position: fixed;
+	right: 1.5rem;
+	bottom: 12rem;
+	width: 4rem;
+	height: 4rem;
+	z-index: 899;
+	font-size: 1.4rem;
+	border-radius: 0.5rem;
+	background-color: $main-cl;
+	border: 1px solid $main-cl;
+	color: $w-cl;
+	box-shadow: 0 0.5rem 1.5rem 0 rgba(#000, 0.2);
+	cursor: pointer;
+	transition: $t2 $cubic1;
+	transform: translateY(1rem);
+	@include hidden;
+	@include mid-flex;
+
+	&.--show {
+		transform: translateY(0);
+		@include visible;
+	}
+}

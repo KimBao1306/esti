@@ -1,0 +1,45 @@
+.receive-mail {
+	overflow: hidden;
+	.cols {
+		align-items: center;
+	}
+	.left {
+		width: calc(100% / 12 * 6.5);
+	}
+	.right {
+		width: calc(100% / 12 * 5.5);
+	}
+	@include max-media($bk-d-992) {
+		.col {
+			width: 100%;
+		}
+	}
+	// @include max-media($bk-d-768) {
+	// 	.col {
+	// 		width: 100%;
+	// 	}
+	// }
+}
+.receive-info {
+	.sub-title {
+		color: rgba($color: $t-b-cl, $alpha: 0.7);
+	}
+	@include max-media($bk-d-1200) {
+		.sub-title {
+			font-size: 1.6rem;
+		}
+	}
+}
+.receive-form {
+	display: flex;
+	.f-control {
+		height: 5rem;
+		&::placeholder {
+			font-size: 1.4rem;
+		}
+	}
+	.main-btn {
+		min-width: 14.6rem;
+		flex-shrink: 0;
+	}
+}

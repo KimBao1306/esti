@@ -1,0 +1,163 @@
+.c-pd-1 {
+	display: flex;
+	flex-wrap: wrap;
+	&-img {
+		width: 20rem;
+		padding-bottom: 13.676%;
+		&:before {
+			content: 'View';
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			z-index: 2;
+			background-color: rgba($color: $bg-b-cl, $alpha: 0.3);
+			transition: $t1;
+			color: $t-w-cl;
+			font-weight: bold;
+			pointer-events: none;
+			font-size: 1.8rem;
+			@include mid-flex;
+			@include hidden;
+		}
+		&:hover {
+			img {
+				transform: scale(1.1);
+			}
+			&:before {
+				@include visible;
+			}
+		}
+	}
+	&-content {
+		flex-grow: 1;
+		width: calc(100% - 42rem);
+		padding: 2rem 2.5rem;
+		border: 1px solid $border-cl;
+		.main-title {
+			margin-bottom: 1rem;
+		}
+		.desc {
+			@include overtext(4);
+		}
+	}
+	&-group {
+		width: 22rem;
+		padding: 2rem 2.5rem;
+		border: 1px solid $border-cl;
+		border-left: 0;
+		.tt {
+			margin-bottom: 1rem;
+		}
+		&-more {
+			p {
+				position: relative;
+				&:before {
+					content: '-';
+					margin-right: 0.5rem;
+				}
+			}
+		}
+	}
+	&:hover {
+		.c-pd-1-img:before {
+			@include visible;
+		}
+	}
+	@include max-media($bk-d-992) {
+		&-img {
+			width: 14rem;
+		}
+		&-content {
+			padding: 1.5rem;
+		}
+		&-group {
+			padding: 1.5rem;
+		}
+	}
+	@include max-media($bk-d-768) {
+		&-img {
+			width: 50%;
+		}
+		&-group {
+			width: 50%;
+		}
+		&-content {
+			width: 100%;
+			order: 1;
+			.main-title {
+				margin-bottom: 0.5rem;
+			}
+		}
+	}
+}
+
+.c-pd {
+	&-img {
+		background-color: $bg-w-cl;
+		padding-bottom: 78.89%;
+		a {
+		}
+		img {
+			transition: $t1;
+			&:last-child {
+				@include hidden;
+			}
+		}
+		@include max-media($bk-d-600) {
+			padding-bottom: 50%;
+		}
+	}
+	&-content {
+		padding-top: 1.5rem;
+		.main-title,
+		.desc {
+			width: 100%;
+			@include overtext(2);
+		}
+	}
+	&-action {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 3rem;
+		height: 3rem;
+		line-height: 3rem;
+		background-color: $main-cl;
+		color: $t-w-cl;
+		font-weight: bold;
+		transition: $t1;
+		transform: translateY(-100%);
+		text-align: center;
+		a {
+			display: block;
+			color: $t-w-cl;
+		}
+		&:hover {
+			background-color: $four-cl;
+		}
+	}
+	&-wishlist {
+		right: 3.5rem;
+		transition: background-color $t1, transform $t1 0s;
+	}
+	&:hover {
+		.c-pd-img {
+			img {
+				&:first-child {
+					@include hidden;
+				}
+				&:last-child {
+					@include visible;
+				}
+			}
+		}
+		.c-pd-action {
+			transform: translateY(0);
+		}
+		.c-pd-wishlist {
+			transition: background-color $t1, transform $t1 0.2s;
+		}
+	}
+}

@@ -1,0 +1,94 @@
+.maps {
+	overflow: hidden;
+	&-wrap {
+		iframe {
+			display: block;
+			width: 100%;
+			height: 100%;
+			min-height: 38rem;
+			background: rgba($color: $bg-b-cl, $alpha: 0.3)
+				url(../images/loading-2.svg) no-repeat center;
+		}
+	}
+}
+.contact {
+	overflow: hidden;
+	.cols {
+		margin-left: -2.5rem;
+		margin-right: -2.5rem;
+	}
+	.col {
+		padding-left: 2.5rem;
+		padding-right: 2.5rem;
+	}
+	.left {
+		width: calc(100% / 12 * 4.5);
+	}
+	.right {
+		width: calc(100% / 12 * 7.5);
+	}
+
+	&-info {
+		&-item {
+			display: flex;
+			align-items: center;
+			img {
+				margin-right: 1.5rem;
+			}
+			div {
+				width: calc(100% - 5.5rem);
+			}
+			.tt {
+				font-weight: 600;
+				margin-bottom: 0.8rem;
+			}
+			.desc {
+				font-size: 1.4rem;
+			}
+			~ .contact-info-item {
+				padding-top: 3.5rem;
+			}
+			&:hover {
+			}
+		}
+	}
+	&-form {
+		display: flex;
+		flex-wrap: wrap;
+		margin: -0.8rem -0.6rem;
+		.f-group {
+			width: 50%;
+			padding: 0.8rem 0.6rem;
+			&:nth-child(4),
+			&:nth-child(5) {
+				width: 100%;
+			}
+		}
+		.f-label {
+			font-weight: 600;
+		}
+		.f-submit {
+			padding: 1.7rem 0.6rem 0.8rem;
+		}
+	}
+	@include max-media($bk-d-1200) {
+		.cols {
+			margin: -1.5rem;
+		}
+		.col {
+			padding: 1.5rem;
+			width: 50%;
+		}
+	}
+	@include max-media($bk-d-768) {
+		.cols {
+			margin-left: -0.75rem;
+			margin-right: -0.75rem;
+		}
+		.col {
+			padding-left: 0.75rem;
+			padding-right: 0.75rem;
+			width: 100%;
+		}
+	}
+}

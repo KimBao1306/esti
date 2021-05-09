@@ -1,0 +1,78 @@
+.sec-breadcrumb {
+	overflow: hidden;
+	padding: 2rem 0;
+	+ * {
+		padding-top: 4rem;
+	}
+	@include max-media($bk-d-768) {
+		padding-top: 1rem;
+		padding-bottom: 0;
+	}
+}
+.breadcrumb {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	li {
+		position: relative;
+		&::after {
+			content: '\f105';
+			font-family: FA;
+			position: absolute;
+			top: 50%;
+			right: 1.2rem;
+			width: 1rem;
+			height: 1rem;
+			transform: translateY(-50%);
+			color: $desc-cl;
+			@include mid-flex;
+		}
+		&.--active a {
+			font-weight: bold;
+			color: $b-cl;
+		}
+	}
+	li:last-child {
+		a {
+			padding: 0;
+		}
+		&::after {
+			display: none;
+		}
+	}
+	a {
+		padding-right: 3rem;
+		color: $desc-cl;
+		transition: $t1 $cubic1;
+		line-height: 1.6;
+		&:hover {
+			color: $second-cl;
+		}
+	}
+}
+/*STYLE BREADCRUMB WHITE*/
+.sec-breadcrumb-white {
+	a {
+		color: rgba($color: $t-w-cl, $alpha: 0.8);
+		&:hover {
+			color: $t-w-cl;
+		}
+	}
+	li:after {
+		color: rgba($color: $t-w-cl, $alpha: 0.8);
+		&:hover {
+			color: $t-w-cl;
+		}
+	}
+	li.--active a {
+		color: $t-w-cl;
+	}
+}
+/*ABSOLUTE BREADCRUMB IN MOBILE*/
+.sec-breadcrumb-absolute {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 2;
+}

@@ -1,0 +1,104 @@
+.main-title-wrap {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	.main-title {
+		margin-bottom: 0;
+	}
+}
+.main-title {
+	font-family: $font-title;
+	transition: $t1 $cubic1;
+	line-height: 1.5;
+	// &:hover {
+	// color: $second-cl;
+	// }
+	&.main-title-2 {
+		font-family: $font-title-2;
+	}
+	&.main-title-3 {
+		font-family: $font-body;
+	}
+}
+.--m-cl {
+	color: $main-cl;
+}
+.--s-cl {
+	color: $second-cl;
+}
+.--w-cl {
+	color: $t-w-cl;
+}
+.tt-60 {
+	@include fz-60;
+}
+.tt-50 {
+	@include fz-50;
+}
+.tt-48 {
+	@include fz-48;
+}
+.tt-40 {
+	@include fz-40;
+}
+.tt-36 {
+	@include fz-36;
+}
+.tt-35 {
+	@include fz-35;
+}
+.tt-30 {
+	@include fz-30;
+}
+.tt-25 {
+	@include fz-25;
+}
+.tt-24 {
+	@include fz-24;
+}
+.tt-22 {
+	@include fz-22;
+}
+.tt-20 {
+	@include fz-20;
+}
+.tt-18 {
+	@include fz-18;
+}
+.tt-16 {
+	font-size: 1.6rem;
+}
+.tt-14 {
+	font-size: 1.4rem;
+}
+.t-center {
+	text-align: center;
+}
+.t-left {
+	text-align: left;
+}
+.t-right {
+	text-align: right;
+}
+.t-justify {
+	text-align: justify;
+}
+.t-uppercase {
+	text-transform: uppercase;
+}
+.t-capitalize {
+	text-transform: capitalize;
+}
+.f-bold {
+	font-weight: bold;
+}
+.f-light {
+	font-weight: lighter;
+}
+.f-semibold {
+	font-weight: 600;
+}
+.f-normal {
+	font-weight: normal;
+}

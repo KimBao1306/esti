@@ -1,0 +1,158 @@
+/*TRẠNG THÁI ĐƠN HÀNG*/
+.tracking {
+	&-list {
+		overflow: hidden;
+		display: flex;
+		flex-wrap: wrap;
+	}
+	&-item {
+		position: relative;
+		width: 20%;
+		&:before,
+		&:after {
+			content: '';
+			position: absolute;
+			top: 2.15rem;
+			width: 50%;
+			height: 0.3rem;
+			background-color: $main-cl;
+		}
+		&:before {
+			left: 0;
+		}
+		&:after {
+			right: 0;
+		}
+		.icon {
+			position: relative;
+			z-index: 1;
+			width: 4.6rem;
+			height: 4.6rem;
+			border-radius: 99rem;
+			background-color: $main-cl;
+			margin: 0 auto 1.5rem;
+			@include mid-flex;
+			img {
+				filter: brightness(0) invert(1);
+				object-fit: cover;
+			}
+		}
+		.content {
+			margin: auto;
+			text-align: center;
+			// max-width: 15.5rem;
+		}
+		&:first-child:before,
+		&:last-child:after {
+			display: none;
+		}
+		&.--active {
+			&:after {
+				background-color: #d2d2d2;
+			}
+			~ .tracking-item {
+				.icon {
+					background-color: #d2d2d2;
+					img {
+						filter: none;
+					}
+				}
+				&:after,
+				&:before {
+					background-color: #d2d2d2;
+				}
+			}
+		}
+	}
+	@include max-media($bk-d-768) {
+		&-item {
+			&:before,
+			&:after {
+				top: 1.35rem;
+			}
+			.icon {
+				width: 3rem;
+				height: 3rem;
+				img {
+					max-width: 1.5rem;
+				}
+			}
+			.content {
+				margin: auto;
+				padding: 0 0.5rem;
+				font-size: 1.2rem;
+			}
+		}
+	}
+}
+/*CHI TIẾT ĐƠN HÀNG*/
+.order-dt-info {
+	.col {
+		width: calc(100% / 3);
+	}
+	&-item {
+		border: 1px solid $border-cl;
+		padding: 3.5rem 3rem;
+		height: 100%;
+		li {
+			@include lh(22, 14);
+			~ li {
+				margin-top: 1.5rem;
+			}
+		}
+	}
+	@include max-media($bk-d-1200) {
+		&-item {
+			padding: 2rem 1.5rem;
+		}
+	}
+	@include max-media($bk-d-992) {
+		.cols {
+			justify-content: center;
+		}
+		.col {
+			width: 50%;
+		}
+	}
+	@include max-media($bk-d-768) {
+		.col {
+			width: 100%;
+		}
+	}
+}
+/*CHI TIẾT SẢN PHẨM*/
+.order-dt-pd {
+	&-table {
+		@include min-media($bk-992) {
+			th:nth-child(3) {
+				width: 30rem;
+			}
+			td,
+			th {
+				&:first-child {
+					padding-left: 2rem;
+				}
+				&:last-child {
+					padding-right: 2rem;
+				}
+			}
+		}
+		@include max-media($bk-d-992) {
+			.frame-table-body {
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: space-between;
+				tr {
+					width: calc(50% - 0.5rem);
+				}
+			}
+		}
+		@include max-media($bk-d-768) {
+			.frame-table-body {
+				tr {
+					width: 100%;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,53 @@
+/*PRODUCT - 1*/
+.pd-list {
+	.col {
+		width: 100%;
+	}
+}
+/*PRODUCT - 2*/
+.pd-2 {
+	.pd-list .col {
+		width: 25%;
+		@include max-media($bk-d-992) {
+			width: calc(100% / 3);
+		}
+		@include max-media($bk-d-768) {
+			width: 50%;
+		}
+		@include max-media($bk-d-600) {
+			width: 100%;
+		}
+	}
+}
+/*PRODUCT RELATED*/
+.pd-related {
+	overflow: hidden;
+	.swiper-slide {
+		width: 25%;
+	}
+	.swiper-button-prev,
+	.swiper-button-next {
+		top: 8.45rem;
+		background-color: $bg-w-cl;
+		color: $main-cl;
+		border: 1px solid;
+		&:hover {
+			background-color: $four-cl;
+			color: $t-w-cl;
+		}
+	}
+	@include max-media($bk-d-1200) {
+		.swiper-slide {
+			width: calc(100% / 3);
+		}
+	}
+	@include max-media($bk-d-768) {
+		.swiper-slide {
+			width: 100%;
+		}
+		.swiper-button-prev,
+		.swiper-button-next {
+			top: 11.5rem;
+		}
+	}
+}

@@ -1,0 +1,23 @@
+.social-mobile {
+	width: 100%;
+	padding: 1.5rem;
+	justify-content: center;
+	display: none;
+	@include max-media($bk-d-1200) {
+		display: flex;
+	}
+	li {
+		margin: 0 0.25rem;
+		a {
+			display: block;
+			width: 3rem;
+			height: 3rem;
+			text-align: center;
+			line-height: 3rem;
+			color: $t-w-cl;
+			background-color: $main-cl;
+			border-radius: 0.5rem;
+			padding: 0;
+		}
+	}
+}

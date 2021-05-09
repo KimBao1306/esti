@@ -1,0 +1,132 @@
+.banner-child {
+	position: relative;
+	overflow: hidden;
+	background-repeat: no-repeat;
+	background-size: cover;
+	&:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-color: rgba($color: $bg-b-cl, $alpha: 0.3);
+		z-index: 0;
+	}
+	&-wrap {
+		position: relative;
+		z-index: 1;
+		padding-top: 0;
+	}
+	&-content {
+		padding: 18.5rem 0;
+		.content {
+			display: inline-block;
+			color: $t-w-cl;
+			padding: 6rem;
+			max-width: 80rem;
+			background-color: rgba($color: $bg-b-cl, $alpha: 0.4);
+		}
+		.desc {
+			font-weight: 500;
+		}
+		.main-title,
+		.desc {
+			overflow: hidden;
+			animation: clipPathText 1.2s ease;
+		}
+	}
+	&-img {
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+	@include max-media($bk-d-1200) {
+		&-content {
+			padding: 10rem 0;
+		}
+	}
+	@include max-media($bk-d-768) {
+		&-content {
+			.content {
+				padding: 3rem;
+			}
+		}
+	}
+}
+.banner-split {
+	position: relative;
+	overflow: hidden;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-color: $bg-b-cl;
+	&-wrap {
+		padding-top: 0;
+	}
+	&-content {
+		padding: 18rem 0 10rem;
+		.cols {
+			align-items: center;
+			justify-content: space-between;
+		}
+		.left {
+			width: calc(100% / 12 * 5);
+		}
+		.right {
+			width: calc(100% / 12 * 6.5);
+		}
+	}
+	&-img {
+		padding: 5rem;
+		background-color: rgba($color: $bg-b-cl, $alpha: 0.5);
+		border: 3px solid #ffd966;
+		img {
+			margin-top: -10rem;
+			object-fit: cover;
+		}
+	}
+	&-desc {
+		background-color: rgba($color: $bg-b-cl, $alpha: 0.5);
+		padding: 5rem;
+		border: 3px solid $main-cl;
+		.main-title {
+			color: $four-cl;
+			max-width: 38rem;
+		}
+		.desc {
+			font-weight: 500;
+			color: $t-w-cl;
+		}
+	}
+	@include max-media($bk-d-992) {
+		&-content {
+			padding-top: 10rem;
+			.col {
+				width: 50%;
+			}
+		}
+		&-img {
+			padding: 2.5rem;
+			img {
+				margin-top: -5rem;
+			}
+		}
+		&-desc {
+			padding: 2.5rem;
+		}
+	}
+	@include max-media($bk-d-768) {
+		&-content {
+			padding-top: 6rem;
+			padding-bottom: 4rem;
+			.cols {
+				flex-direction: column-reverse;
+			}
+			.col {
+				width: 100%;
+			}
+		}
+	}
+}

@@ -1,0 +1,67 @@
+.doc-dt {
+	.left {
+		width: calc(100% / 12 * 3);
+	}
+	.right {
+		width: calc(100% / 12 * 9);
+	}
+
+	@include max-media($bk-d-1200) {
+		.left {
+			padding: 0;
+		}
+		.right {
+			width: 100%;
+		}
+	}
+}
+.doc-dt-wrap {
+	position: relative;
+}
+.doc-dt-filter {
+	&-form {
+		display: flex;
+		flex-wrap: wrap;
+		margin: -1rem;
+		.f-group {
+			width: 50%;
+			padding: 1rem;
+		}
+		.f-label {
+			font-weight: 600;
+			margin-bottom: 1rem;
+		}
+		.f-control {
+			border-radius: 0.6rem;
+			transition: $t1;
+			&:focus {
+				border-color: $main-cl;
+			}
+		}
+		.f-submit {
+			width: 100%;
+			text-align: right;
+			padding: 1.5rem 1rem 1rem;
+		}
+		@include max-media($bk-d-768) {
+			.f-group {
+				width: 100%;
+			}
+		}
+	}
+}
+.doc-list {
+	overflow: hidden;
+	.cols {
+		margin: -1rem;
+	}
+	.col {
+		padding: 1rem;
+		width: calc(100% / 3);
+	}
+	@include max-media($bk-d-768) {
+		.col {
+			width: 100%;
+		}
+	}
+}

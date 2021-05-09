@@ -1,0 +1,55 @@
+.c-doc {
+	display: flex;
+	background-color: $third-cl;
+	&-img {
+		width: 50%;
+		padding-bottom: 65.068%;
+		&:before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			z-index: 1;
+			background-color: rgba($color: $bg-b-cl, $alpha: 0.3);
+		}
+		&:after {
+			content: '\f019';
+			font-family: FA;
+			font-size: 3rem;
+			color: $t-w-cl;
+			z-index: 2;
+			@include mid;
+		}
+		&:before,
+		&:after {
+			pointer-events: none;
+			transition: $t1;
+			@include hidden;
+		}
+	}
+	&-content {
+		border: 1px solid $border-cl;
+		border-left: 0;
+		width: 50%;
+		padding: 2rem 1.5rem;
+		.download-btn {
+			font-weight: 600;
+			color: $main-cl;
+		}
+	}
+	&:hover {
+		.c-doc-img {
+			&:before,
+			&:after {
+				@include visible;
+			}
+		}
+	}
+	@include max-media($bk-d-768) {
+		&-img {
+			padding-bottom: 50%;
+		}
+	}
+}

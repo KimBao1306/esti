@@ -1,0 +1,71 @@
+@charset "utf-8";
+/* FONTS */
+@import url('../fonts/BeVN/stylesheet.css');
+@import url('../fonts/Montserrat/stylesheet.css');
+@import url('../fonts/SFProDisplay/stylesheet.css');
+/* LIBRARIES */
+@import url('../js/libs/Font-awesome-4.7.0/css/font-awesome.min.css');
+@import url('../js/libs/swiper/swiper.min.css');
+@import url('../js/libs/magnific-popup/magnific-popup.css');
+@import url('../js/libs/aos/aos.css');
+@import url('../js/libs/light-gallery/lightgallery.min.css');
+
+/* Core variables and mixins - structure from NghiaTran */
+@import './core/reset';
+@import './core/variables';
+@import './core/mixins';
+@import './core/base';
+@import './core/animation';
+@import './core/mona';
+
+/* Components */
+@import './components/sec';
+@import './components/logo';
+@import './components/header';
+@import './components/footer';
+@import './components/customSwiper';
+@import './components/spacing';
+@import './components/button';
+@import './components/form-control';
+@import './components/heading';
+@import './components/breadcrumb';
+@import './components/overlay';
+@import './components/loading';
+@import './components/pagination';
+@import './components/partners';
+@import './components/rating-star';
+@import './components/ratio';
+@import './components/social-nav';
+@import './components/tabs';
+@import './components/popup';
+@import './components/lightgallery';
+@import './components/news-aside';
+@import './components/question';
+@import './components/lang';
+@import './components/search';
+@import './components/cart';
+@import './components/banner';
+@import './components/receive-mail';
+@import './components/news';
+@import './components/filter';
+@import './components/table';
+@import './components/pd';
+@import './components/doc';
+
+/* Pages */
+@import './pages/404';
+@import './pages/news';
+@import './pages/news-dt';
+@import './pages/search-dt';
+@import './pages/pd';
+@import './pages/pd-dt';
+@import './pages/partners';
+@import './pages/partners-dt';
+@import './pages/order';
+@import './pages/order-dt';
+@import './pages/doc';
+@import './pages/doc-dt';
+@import './pages/auth';
+@import './pages/account';
+@import './pages/contact';
+@import './pages/home';

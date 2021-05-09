@@ -1,0 +1,163 @@
+.main-auth {
+	position: relative;
+	background-image: url(../images/auth-bg.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	&:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-color: rgba($color: $bg-b-cl, $alpha: 0.1);
+	}
+}
+
+.auth {
+	position: relative;
+	z-index: 2;
+	padding: 16rem 0 33.6rem;
+	&-wrap {
+		max-width: 50%;
+		margin-left: auto;
+	}
+
+	&-title {
+		display: flex;
+
+		.main-btn {
+			height: 5rem;
+			line-height: 2.6rem;
+			width: 50%;
+			&.--active,
+			&:hover {
+				background-color: #99c8f8;
+				color: $main-cl;
+				box-shadow: none;
+			}
+		}
+	}
+	&-form-wrap {
+		padding: 4.5rem 3.5rem;
+		background-color: rgba($color: $bg-w-cl, $alpha: 0.7);
+	}
+	&-form {
+		.f-control {
+			margin-bottom: 1.5rem;
+			&::placeholder {
+				color: $desc-cl;
+			}
+		}
+		.f-submit {
+			text-align: right;
+			margin-top: 2.5rem;
+		}
+		.auth-forget {
+			position: relative;
+			font-weight: 600;
+			color: $main-cl;
+			margin-right: 3rem;
+			&:before {
+				content: '';
+				position: absolute;
+				bottom: -0.15rem;
+				left: 0;
+				width: 100%;
+				height: 0.1rem;
+				background-color: $main-cl;
+				transition: $t1;
+			}
+			&:hover:before {
+				transform: scaleX(0.3);
+			}
+		}
+	}
+	@include max-media($bk-d-1200) {
+		padding: 10rem 0 16rem;
+	}
+	@include max-media($bk-d-992) {
+		&-wrap {
+			max-width: 70%;
+		}
+	}
+	@include max-media($bk-d-768) {
+		padding: 8rem 0 10rem;
+		&-wrap {
+			max-width: 100%;
+		}
+		&-form-wrap {
+			padding: 1.5rem;
+		}
+	}
+}
+
+.register {
+	padding-top: 10rem;
+	padding-bottom: 8rem;
+	.auth-wrap {
+		max-width: calc(100% / 12 * 9);
+	}
+	.auth-title {
+		margin-left: auto;
+		max-width: 50%;
+	}
+	.auth-form {
+		display: flex;
+		flex-wrap: wrap;
+		margin: -1rem;
+		.f-group {
+			width: calc(100% / 3);
+			padding: 1rem;
+			&:nth-child(5),
+			&:nth-child(6) {
+				width: 100%;
+			}
+			&:nth-child(n + 7) {
+				width: 50%;
+			}
+		}
+		.f-label {
+			color: $second-cl;
+			font-weight: bold;
+		}
+		.f-control {
+			margin-bottom: 0;
+		}
+		.f-submit {
+			padding: 1rem;
+			width: 100%;
+			margin-top: 2rem;
+			.main-btn {
+				min-width: 16rem;
+			}
+		}
+	}
+	@include max-media($bk-d-1200) {
+		padding-top: 8rem;
+	}
+	@include max-media($bk-d-992) {
+		.auth-wrap {
+			max-width: 100%;
+		}
+	}
+	@include max-media($bk-d-768) {
+		padding: 6rem 0;
+		.auth-title {
+			max-width: 100%;
+		}
+		.auth-form {
+			margin: -0.5rem;
+			.f-group {
+				width: 50%;
+				padding: 0.5rem;
+				&:nth-child(4) {
+					width: 100%;
+				}
+			}
+			.f-submit {
+				padding: 0.5rem;
+			}
+		}
+	}
+}

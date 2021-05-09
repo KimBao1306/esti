@@ -1,0 +1,38 @@
+.lang {
+	display: flex;
+	align-items: center;
+	margin-right: 3rem;
+	a {
+		font-weight: bold;
+		color: rgba($color: $second-cl, $alpha: 0.5);
+		&:hover,
+		&.--active {
+			color: $four-cl;
+		}
+	}
+	span {
+		font-weight: bold;
+		display: inline-block;
+		margin: 0 1rem;
+		height: 1.6rem;
+		width: 0.1rem;
+		background-color: rgba($color: $bg-b-cl, $alpha: 0.2);
+	}
+	@include max-media($bk-d-1200) {
+		margin-right: 0;
+	}
+	@include max-media($bk-d-992) {
+		display: none;
+	}
+}
+.lang-mobile {
+	display: none;
+	justify-content: center;
+	margin-top: 3rem;
+	padding: 1.5rem;
+	width: 100%;
+	color: $main-cl;
+	@include max-media($bk-d-1200) {
+		display: flex;
+	}
+}

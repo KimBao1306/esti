@@ -1,0 +1,57 @@
+/* SỐ LƯỢNG*/
+.qtt {
+	width: 6rem;
+	height: 4rem;
+	display: flex;
+	align-items: center;
+	background-color: $bg-w-cl;
+	border: 1px solid rgba($color: $bg-b-cl, $alpha: 0.1);
+	> * {
+		width: calc(100% / 3);
+	}
+	.f-control {
+		text-align: center;
+		width: 4rem;
+		height: 100%;
+	}
+	.qtt-btn-wrap {
+		width: 2rem;
+		height: 100%;
+		border-left: 1px solid $border-cl;
+	}
+	.qtt-btn {
+		position: relative;
+		width: 100%;
+		height: 50%;
+		font-size: 1.2rem;
+		cursor: pointer;
+		user-select: none;
+		transition: $t1 $cubic1;
+		font-weight: bold;
+		@include mid-flex;
+		color: $desc-cl;
+		&:hover {
+			color: $t-w-cl;
+			background-color: $main-cl;
+		}
+		&:before {
+			content: '';
+			position: absolute;
+			left: 0;
+			bottom: 0rem;
+			width: 100%;
+			height: 0.1rem;
+			background-color: $border-cl;
+		}
+		&.qtt-down:before {
+			display: none;
+		}
+	}
+	.qtt-input {
+		padding: 0.5rem;
+		border-radius: 0;
+		border: 0;
+		background-color: transparent;
+		font-weight: bold;
+	}
+}

@@ -1,0 +1,31 @@
+.news-aside {
+	&-item {
+		.title {
+			font-weight: 600;
+			font-size: 1.6rem;
+		}
+	}
+	&-list {
+		a {
+			line-height: 2.7;
+		}
+	}
+	&-post {
+		li ~ li {
+			border-top: 1px solid $border-cl;
+			padding-top: 1.5rem;
+			margin-top: 1.5rem;
+		}
+	}
+	&-search {
+		position: relative;
+		display: flex;
+		.f-control {
+			height: 5rem;
+			background-color: $third-cl;
+		}
+		.main-btn {
+			min-width: 11.7rem;
+		}
+	}
+}
