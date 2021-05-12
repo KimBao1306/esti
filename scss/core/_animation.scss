@@ -65,18 +65,18 @@
 }
 @keyframes pulse {
 	0% {
-		transform: scale(0.95);
-		box-shadow: 0 0 0 0 rgba(255, 82, 82, 0.7);
+		transform: scale(0.95) translate(-50%, -50%);
+		box-shadow: 0 0 0 0 rgba($color: $four-cl, $alpha: 0.7);
 	}
 
 	70% {
-		transform: scale(1);
-		box-shadow: 0 0 0 10px rgba(255, 82, 82, 0);
+		transform: scale(1) translate(-50%, -50%);
+		box-shadow: 0 0 0 1rem rgba(0, 0, 0, 0);
 	}
 
 	100% {
-		transform: scale(0.95);
-		box-shadow: 0 0 0 0 rgba(255, 82, 82, 0);
+		transform: scale(0.95) translate(-50%, -50%);
+		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
 	}
 }
 @keyframes clipPathText {

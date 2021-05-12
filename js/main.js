@@ -19,6 +19,7 @@ import ProductModule from './modules/ProductModule.js';
 import QuantityPickerModule from './modules/QuantityPickerModule.js';
 import PartnersModule from './modules/PartnersModule.js';
 import ChartModule from './modules/ChartModule.js';
+import CustomInputModule from './modules/CustomInputModule.js';
 
 jQuery(document).ready(function ($) {
 	LoadingModule();
@@ -42,4 +43,5 @@ jQuery(document).ready(function ($) {
 	QuantityPickerModule();
 	PartnersModule();
 	ChartModule();
+	CustomInputModule();
 });

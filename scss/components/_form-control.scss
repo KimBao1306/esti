@@ -27,6 +27,16 @@
 	&.wpcf7-not-valid {
 		border-color: #f00;
 	}
+	&:read-only {
+		cursor: not-allowed;
+		background-color: $third-cl;
+	}
+}
+.flatpickr-input {
+	&:read-only {
+		cursor: pointer;
+		background-color: $bg-w-cl;
+	}
 }
 select {
 	&.f-control {
@@ -34,6 +44,10 @@ select {
 			no-repeat;
 		padding-right: 3.5rem;
 		cursor: pointer;
+		&:read-only {
+			cursor: pointer;
+			background-color: $bg-w-cl;
+		}
 	}
 }
 .select2-js {

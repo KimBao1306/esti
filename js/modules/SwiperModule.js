@@ -125,17 +125,53 @@ export default function SwiperModule() {
 	// SLIDER COMMON - END
 
 	function bannerSlider(el) {
-		const slideChangeTransitionStart = function () {
+		const $this = $(el);
+		const $swiper = $this.find('.swiper-container');
+		const nextBtn = $this.find('.swiper-button-next');
+		const prevBtn = $this.find('.swiper-button-prev');
+		const pagination = $this.find('.swiper-pagination');
+		const isLoop = $this.hasClass('--loop') || false;
+		const isAuto =
+			($this.hasClass('--auto') && {
+				speed: 6000,
+				delay: 5000,
+				disableOnInteraction: false,
+			}) ||
+			false;
+		const swp = new Swiper($swiper, {
+			init: false,
+			speed: 1200,
+			// autoHeight: false,
+			autoplay: isAuto,
+			slidesPerView: 'auto',
+			watchSlidesProgress: true,
+			observer: true,
+			observeParents: true,
+			observeSlideChildren: true,
+			pagination: {
+				el: pagination,
+				clickable: true,
+			},
+			navigation: {
+				nextEl: nextBtn,
+				prevEl: prevBtn,
+			},
+			loop: isLoop,
+			on: {},
+		});
+		swp.on('slideChangeTransitionStart', function () {
 			const currentIndex = this.params.loop ? this.activeIndex : this.realIndex;
 			const currentSlide = this.slides[currentIndex];
-			$(currentSlide).find('.banner-slider__item').removeClass('--active');
-		};
-		const slideChangeTransitionEnd = function () {
+			$(currentSlide).find('.banner-home-item').removeClass('--active');
+		});
+		swp.on('slideChangeTransitionEnd', function () {
 			const currentIndex = this.params.loop ? this.activeIndex : this.realIndex;
 			const currentSlide = this.slides[currentIndex];
-			$(currentSlide).find('.banner-slider__item').addClass('--active');
-		};
+			$(currentSlide).find('.banner-home-item').addClass('--active');
+		});
+		swp.init();
 	}
-
+	$('.banner-home .is-slider').length &&
+		bannerSlider('.banner-home .is-slider');
 	/** SWIPER - END*/
 }

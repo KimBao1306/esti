@@ -36,11 +36,11 @@
 		.swiper-pagination {
 			display: none;
 		}
-		@include max-media($bk-d-992) {
-			.swiper-pagination {
-				display: block;
-			}
-		}
+		// @include max-media($bk-d-992) {
+		// 	.swiper-pagination {
+		// 		display: block;
+		// 	}
+		// }
 	}
 	&.is-slider-detail-thumbs {
 		.swiper-wrapper {
@@ -57,7 +57,7 @@
 	.swiper-pagination {
 		display: none;
 	}
-	@include max-media($bk-d-992) {
+	@include max-media($bk-d-768) {
 		.swiper-pagination {
 			display: block;
 		}
@@ -75,25 +75,21 @@
 		position: static;
 		color: #fff;
 		margin-top: 0;
-		width: 6rem;
-		height: 6rem;
+		width: 7rem;
+		height: 7rem;
 		display: inline-flex;
+		background-color: $main-cl;
+		&:hover {
+			background-color: $four-cl;
+		}
 	}
 	.swiper-button-prev {
-		background-color: $second-cl;
-		&:hover {
-			background-color: $main-cl;
-		}
 		&::after {
 			content: '\f104';
 		}
 	}
 	.swiper-button-next {
 		// margin-left: 5px;
-		background-color: $main-cl;
-		&:hover {
-			background-color: $second-cl;
-		}
 		&::after {
 			content: '\f105';
 		}
@@ -139,7 +135,6 @@
 	position: static;
 	margin-top: 1.5rem;
 	@include max-media($bk-d-992) {
-		margin-top: 1rem;
 	}
 }
 .swiper-pagination-bullet {
@@ -188,10 +183,12 @@
 		padding: 1.5rem;
 		height: auto;
 	}
-	@include max-media($bk-d-992) {
-		margin: -0.75rem;
+	@include max-media($bk-d-768) {
+		margin-left: -0.75rem;
+		margin-right: -0.75rem;
 		.swiper-slide {
-			padding: 0.75rem;
+			padding-left: 0.75rem;
+			padding-right: 0.75rem;
 		}
 	}
 }

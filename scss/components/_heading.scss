@@ -7,6 +7,7 @@
 		margin-bottom: 0;
 	}
 }
+
 .main-title {
 	font-family: $font-title;
 	transition: $t1 $cubic1;
@@ -20,6 +21,9 @@
 	&.main-title-3 {
 		font-family: $font-body;
 	}
+}
+.--f-cl {
+	color: $four-cl;
 }
 .--m-cl {
 	color: $main-cl;

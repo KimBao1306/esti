@@ -6,19 +6,17 @@ export default function FlatPickrModule() {
 			dateFormat: 'd/m/Y ',
 			// enableTime: true,
 			time_24hr: true,
-			locale: 'vn',
 		});
 		const fromDate = flatpickr('#from-date', {
 			disableMobile: 'true',
 			dateFormat: 'd/m/Y ',
 			// enableTime: true,
 			time_24hr: true,
-			locale: 'vn',
 			onReady: function () {
-				this.set('minDate', new Date());
+				// this.set('minDate', new Date());
 			},
 			onChange: function (selectedDates, dateStr, instance) {
-				toDate.set('minDate', dateStr);
+				// toDate.set('minDate', dateStr);
 			},
 		});
 	}

@@ -5,9 +5,6 @@
 		&:before {
 			display: none;
 		}
-		&-img {
-			padding-top: 0;
-		}
 	}
 }
 
@@ -204,6 +201,10 @@
 				.col:nth-child(n) {
 					width: 100%;
 				}
+				.account-status-list {
+					padding-right: 0;
+					padding-bottom: 2rem;
+				}
 			}
 		}
 	}
@@ -233,6 +234,384 @@
 			padding: 0.5rem;
 		}
 		#js-order-chart {
+		}
+	}
+}
+
+/*TÀI KHOẢN*/
+.account-form {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-start;
+	justify-content: space-between;
+	.f-submit {
+		width: 100%;
+	}
+}
+.account-form-group {
+	display: flex;
+	flex-wrap: wrap;
+	margin: -1rem -0.8rem;
+	~ div {
+		margin-top: 2rem;
+	}
+	.title {
+		font-weight: 600;
+		color: $main-cl;
+		width: 100%;
+		padding: 1rem 0.8rem;
+	}
+	.f-group {
+		padding: 1rem 0.8rem;
+		width: 50%;
+		&:nth-child(2) {
+			width: calc(100% / 3 * 2);
+		}
+		&:nth-child(3) {
+			width: calc(100% / 3 * 1);
+		}
+		&:nth-child(4),
+		&:nth-child(5),
+		&:nth-child(6) {
+			width: calc(100% / 3);
+		}
+		&:nth-child(7),
+		&:nth-child(10) {
+			width: 100%;
+		}
+	}
+	.f-label {
+		font-size: 1.2rem;
+		color: $desc-cl;
+	}
+	&:nth-child(4),
+	&:nth-child(5) {
+		width: 50%;
+	}
+	&:nth-child(4) {
+		.title {
+			width: 30%;
+		}
+		.f-group {
+			width: 60%;
+		}
+	}
+	&:nth-child(5) {
+		.f-group {
+			position: relative;
+			width: 100%;
+			.fa {
+				position: absolute;
+				bottom: 2.5rem;
+				right: 2.5rem;
+				cursor: pointer;
+				color: $desc-cl;
+			}
+		}
+	}
+}
+@include max-media($bk-d-992) {
+	.account-form-group:nth-child(4) {
+		.title {
+			width: 35%;
+		}
+		.f-group {
+			width: 65%;
+		}
+	}
+}
+@include max-media($bk-d-768) {
+	.account-form {
+		.f-submit {
+			order: 2;
+		}
+	}
+	.account-form-group {
+		.f-group {
+			width: 100% !important;
+		}
+		&:nth-child(4) {
+			order: 1;
+		}
+		&:nth-child(4),
+		&:nth-child(5) {
+			width: 100%;
+			width: calc(100% + 1.6rem);
+		}
+	}
+}
+.account-form-avatar {
+	position: relative;
+	background-color: $third-cl;
+	text-align: center;
+	.avatar {
+		cursor: pointer;
+		display: block;
+		padding: 2rem 2.5rem;
+	}
+
+	.img {
+		border-radius: 99rem;
+		width: 11.6rem;
+		height: 11.6rem;
+		position: relative;
+		margin: auto;
+		img {
+			border-radius: inherit;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+	.name {
+		margin-bottom: 0.5rem;
+		padding-top: 1.5rem;
+		font-weight: 600;
+		text-transform: capitalize;
+	}
+	.desc {
+		span {
+			color: $main-cl;
+		}
+	}
+	&:before {
+		content: '';
+		position: absolute;
+		top: 1rem;
+		right: 1rem;
+		width: 1.6rem;
+		height: 1.6rem;
+		background: url(../images/icon-camera.png) no-repeat;
+		background-size: cover;
+		pointer-events: none;
+	}
+}
+
+/*QUẢN LÝ ĐƠN HÀNG*/
+.account-search-order {
+	display: flex;
+	.f-control {
+		margin-right: 1.5rem;
+	}
+	.main-btn {
+		min-width: 15.7rem;
+	}
+	@include max-media($bk-d-768) {
+		flex-wrap: wrap;
+		margin-bottom: 1rem;
+		.f-control {
+			margin-right: 0;
+		}
+		.main-btn {
+			margin-top: 1rem;
+			width: 100%;
+		}
+	}
+}
+.account-order-sort {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-end;
+	> div {
+		display: flex;
+		align-items: center;
+		+ div {
+			margin-left: 2.5rem;
+		}
+	}
+	.title {
+		white-space: nowrap;
+		margin-right: 1.2rem;
+	}
+	.f-control {
+		min-width: 22rem;
+		color: $desc-cl;
+	}
+	@include max-media($bk-d-768) {
+		margin-bottom: 2rem;
+		justify-content: flex-start;
+		> div {
+			width: 100%;
+			flex-direction: column;
+			align-items: flex-start;
+			+ div {
+				margin-top: 1rem;
+				margin-left: 0;
+			}
+		}
+		.title {
+			margin-bottom: 0.5rem;
+		}
+		.f-control {
+			width: 100%;
+		}
+	}
+}
+.account-order-table {
+	border: 1px solid $border-cl;
+	.frame-table-head tr {
+		height: 7rem;
+	}
+	td {
+		color: $desc-cl;
+	}
+	th {
+		text-transform: none;
+	}
+	th:nth-child(4) {
+		width: 13rem;
+	}
+	th:nth-child(5) {
+		width: 15rem;
+	}
+	@include max-media($bk-d-992) {
+		border: none;
+		.frame-table-body {
+			display: flex;
+			justify-content: space-between;
+			flex-wrap: wrap;
+		}
+		tr {
+			width: calc(50% - 0.5rem);
+		}
+		.frame-table-mobile {
+			width: 55%;
+			+ *:not(.qtt) {
+				width: calc(45% - 2rem);
+			}
+		}
+	}
+	@include max-media($bk-d-768) {
+		tr {
+			width: 100%;
+		}
+	}
+}
+.account-order-dt {
+	div + div {
+		margin-top: 3rem;
+		padding-top: 3rem;
+		border-top: 1px solid $main-cl;
+	}
+	ul {
+		column-count: 2;
+		column-gap: 2rem;
+	}
+	li {
+		margin-bottom: 1.5rem;
+		break-inside: avoid;
+	}
+	b {
+		display: inline-block;
+		margin-bottom: 1rem;
+	}
+	p {
+		max-width: 29rem;
+		margin-bottom: 1rem;
+		line-height: 1.7;
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+	@include max-media($bk-d-768) {
+		ul {
+			column-count: 1;
+		}
+		div + div {
+			margin-top: 1.5rem;
+			padding-top: 1.5rem;
+		}
+		li:last-child {
+			margin-bottom: 0;
+		}
+		p {
+			max-width: 100%;
+		}
+	}
+}
+.account-order-dt-table {
+	border: 1px solid $border-cl;
+	td {
+		color: $desc-cl;
+	}
+	th {
+		text-transform: none;
+	}
+	th:nth-child(3) {
+		width: 18.2rem;
+	}
+	td:nth-child(3) {
+		padding-top: 1rem;
+		padding-bottom: 1rem;
+	}
+	tfoot {
+		tr {
+			border-top: 1px solid $border-cl;
+			height: 5rem;
+		}
+		td {
+			color: $t-b-cl;
+			text-align: right;
+			&:last-child {
+				text-align: left;
+			}
+		}
+	}
+	@include max-media($bk-d-992) {
+		border: none;
+		.frame-table-body {
+			display: flex;
+			justify-content: space-between;
+			flex-wrap: wrap;
+		}
+		tr {
+			width: calc(50% - 0.5rem);
+		}
+		tfoot {
+			border: 1px solid $border-cl;
+			border-top: 0;
+			tr {
+				height: auto;
+				padding: 1rem 0;
+				width: 100%;
+				display: flex;
+				justify-content: flex-end;
+			}
+			td {
+				&:first-child {
+					width: 80%;
+				}
+				&:last-child {
+					text-align: right;
+					flex-grow: 1;
+				}
+			}
+		}
+	}
+	@include max-media($bk-d-768) {
+		tr {
+			width: 100%;
+		}
+		tfoot {
+			td {
+				&:first-child {
+					width: 60%;
+					text-align: left;
+				}
+			}
+		}
+	}
+}
+
+//
+.main-account-4,
+.main-account-5 {
+	.account-order-dt-table {
+		th:nth-child(3) {
+			width: 25rem;
 		}
 	}
 }

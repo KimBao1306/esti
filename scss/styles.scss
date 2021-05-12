@@ -9,6 +9,7 @@
 @import url('../js/libs/magnific-popup/magnific-popup.css');
 @import url('../js/libs/aos/aos.css');
 @import url('../js/libs/light-gallery/lightgallery.min.css');
+@import url('../js/libs/flatpickr/flatpickr.min.css');
 
 /* Core variables and mixins - structure from NghiaTran */
 @import './core/reset';
@@ -51,6 +52,7 @@
 @import './components/table';
 @import './components/pd';
 @import './components/doc';
+@import './components/team';
 
 /* Pages */
 @import './pages/404';
@@ -67,5 +69,6 @@
 @import './pages/doc-dt';
 @import './pages/auth';
 @import './pages/account';
+@import './pages/about';
 @import './pages/contact';
 @import './pages/home';
