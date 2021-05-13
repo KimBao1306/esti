@@ -102,6 +102,10 @@
 			color: $t-w-cl;
 		}
 	}
+	&-form {
+		margin-left: auto;
+		max-width: 47rem;
+	}
 	@include max-media($bk-d-992) {
 		&-content {
 			padding-top: 10rem;

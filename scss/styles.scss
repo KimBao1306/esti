@@ -10,6 +10,8 @@
 @import url('../js/libs/aos/aos.css');
 @import url('../js/libs/light-gallery/lightgallery.min.css');
 @import url('../js/libs/flatpickr/flatpickr.min.css');
+@import url('../js/libs/dropzone/basic.min.css');
+@import url('../js/libs/dropzone/dropzone.min.css');
 
 /* Core variables and mixins - structure from NghiaTran */
 @import './core/reset';
@@ -53,6 +55,7 @@
 @import './components/pd';
 @import './components/doc';
 @import './components/team';
+@import './components/frame-order';
 
 /* Pages */
 @import './pages/404';
@@ -69,6 +72,9 @@
 @import './pages/doc-dt';
 @import './pages/auth';
 @import './pages/account';
-@import './pages/about';
+@import './pages/cart';
+@import './pages/fast-order';
+@import './pages/quotation';
 @import './pages/contact';
+@import './pages/about';
 @import './pages/home';

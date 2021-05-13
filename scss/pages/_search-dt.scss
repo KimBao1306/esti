@@ -46,21 +46,4 @@
 			}
 		}
 	}
-	@include max-media($bk-d-992) {
-		.frame-table-body {
-			display: flex;
-			flex-wrap: wrap;
-			justify-content: space-between;
-			tr {
-				width: calc(50% - 0.5rem);
-			}
-		}
-	}
-	@include max-media($bk-d-768) {
-		.frame-table-body {
-			tr {
-				width: 100%;
-			}
-		}
-	}
 }
