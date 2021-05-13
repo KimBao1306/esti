@@ -10,8 +10,7 @@ import TabModule from './modules/TabModule.js';
 import FlatPickrModule from './modules/FlatPickrModule.js';
 import LoadingModule from './modules/LoadingModule.js';
 import ScrollToTopModule from './modules/ScrollToTopModule.js';
-import IsotopeModule from './modules/IsotopeModule.js';
-import ViewportModule from './modules/ViewPortModule.js';
+import ViewportModule from './modules/ViewportModule.js';
 import ButtonModule from './modules/ButtonModule.js';
 import FormatPhoneNumber from './modules/FormatPhoneNumber.js';
 import FilterModule from './modules/FilterModule.js';
@@ -34,7 +33,6 @@ jQuery(document).ready(function ($) {
 	TabModule();
 	FlatPickrModule();
 	ScrollToTopModule();
-	IsotopeModule();
 	ViewportModule();
 	ButtonModule();
 	FormatPhoneNumber();

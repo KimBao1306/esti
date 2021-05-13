@@ -574,6 +574,8 @@
 	}
 	@include max-media($bk-d-768) {
 		tfoot {
+			display: block;
+			margin-top: 1rem;
 			td {
 				&:first-child {
 					width: 60%;

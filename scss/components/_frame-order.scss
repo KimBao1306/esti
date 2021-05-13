@@ -147,6 +147,9 @@
 	margin-top: 1rem;
 	.main-btn {
 		min-width: 21rem;
+		~ .main-btn {
+			margin-left: 1.5rem;
+		}
 	}
 }
 /*STEP TYPE*/
@@ -190,9 +193,7 @@
 	.search-form {
 		background-color: transparent;
 	}
-	.search-result-list {
-		max-height: 43.2rem;
-	}
+
 	&-seemore {
 		display: inline-block;
 		text-align: center;
@@ -228,6 +229,11 @@
 		&-seemore {
 			height: 4rem;
 			line-height: 4rem;
+		}
+	}
+	@include max-media($bk-d-768) {
+		.search-result-list {
+			max-height: 43.2rem;
 		}
 	}
 }
@@ -326,6 +332,76 @@
 	@include max-media($bk-d-768) {
 		.custom-checkbox-2 {
 			max-width: 100%;
+		}
+	}
+}
+/*STEP COMPANY*/
+.step-company {
+}
+.step-company-wrap {
+	> .cols > .col {
+		width: 50%;
+		&:nth-child(2),
+		&:last-child {
+			width: 100%;
+		}
+		&:nth-child(3) {
+			.cols {
+				margin: -0.5rem;
+			}
+			.col {
+				padding: 0.5rem;
+			}
+			.col:first-child {
+				width: calc(100% / 3 * 1);
+			}
+			.col:last-child {
+				width: calc(100% / 3 * 2);
+			}
+		}
+		&:nth-last-child(2) {
+			.cols {
+				margin: -0.5rem;
+			}
+			.col {
+				padding: 0.5rem;
+				width: 50%;
+			}
+		}
+	}
+	.f-group {
+	}
+
+	.f-label {
+		font-size: 1.2rem;
+		font-style: italic;
+		color: $desc-cl;
+	}
+	.f-id-account {
+		display: flex;
+		align-items: flex-end;
+		> div {
+			flex-grow: 1;
+			width: 40rem;
+			padding-right: 1.5rem;
+		}
+	}
+	@include max-media($bk-d-992) {
+		.f-id-account {
+			> div {
+				width: auto;
+			}
+		}
+	}
+	@include max-media($bk-d-768) {
+		> .cols {
+			margin-top: -0.75rem;
+			margin-bottom: -0.75rem;
+			> .col {
+				width: 100%;
+				padding-top: 0.75rem;
+				padding-bottom: 0.75rem;
+			}
 		}
 	}
 }

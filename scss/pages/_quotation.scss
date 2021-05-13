@@ -1,0 +1,9 @@
+.main-quotation-1 {
+	.step-address {
+		@include max-media($bk-d-768) {
+			.col {
+				width: 100%;
+			}
+		}
+	}
+}

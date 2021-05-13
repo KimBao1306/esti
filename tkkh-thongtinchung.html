@@ -303,7 +303,7 @@
 						<img src="images/banner-account.png" alt="" />
 					</div>
 				</div>
-				<section class="account sec-80">
+				<section class="account sec-80 --pb-0">
 					<div class="container">
 						<div class="cols">
 							<div class="col left">
@@ -341,7 +341,13 @@
 								<div class="account-wrap">
 									<div class="account-title --mb-20">
 										<h2
-											class="main-title main-title-3 tt-25 f-semibold t-uppercase --m-cl"
+											class="
+												main-title main-title-3
+												tt-25
+												f-semibold
+												t-uppercase
+												--m-cl
+											"
 										>
 											Thông tin chung
 										</h2>
@@ -425,6 +431,12 @@
 													</div>
 													<div class="col">
 														<div class="circle-chart">
+															<!-- 
+                                id: Number
+                                title: String - Tên
+                                value: Number - Phần Trăm
+                                bgColor: String - Mã hex color
+                              -->
 															<canvas
 																id="js-status-chart"
 																data-chart-date='[{"id":"1","title":"Thiết bị thí nghiệm","value":"20", "bgColor": "#898989"},{"id":"2","title":"Vật tư tiêu hao","value":"10","bgColor": "#1aac55"},{"id":"3","title":"Hóa chất phân tích","value":"8","bgColor": "#e1e1e1"},{"id":"4","title":"Chất chuẩn","value":"12","bgColor":"#125daa"},{"id":"5","title":"Dụng cụ thí nghiệm","value":"20","bgColor":"#02194f"},{"id":"6","title":"Nội thất thí nghiệm","value":"15","bgColor":"#f9663f"},{"id":"7","title":"Dịch vụ bảo trì","value":"15","bgColor":"#38cbe6"}]'
@@ -473,6 +485,11 @@
 										</div>
 										<div class="account-order-chart">
 											<div class="order-chart">
+												<!-- 
+                          id: Number
+                          date: String - Số ngày
+                          value: Number - Phần Trăm
+                        -->
 												<canvas
 													id="js-order-chart"
 													data-chart-date='[{"id":"1","date":"15/02","value":"100"},{"id":"2","date":"16/02","value":"1"},{"id":"3","date":"17/02","value":"55"},{"id":"4","date":"18/02","value":"60"},{"id":"5","date":"19/02","value":"06"},{"id":"6","date":"20/02","value":"21"},{"id":"7","date":"21/02","value":"13"}]'

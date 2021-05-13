@@ -11,11 +11,11 @@
 	}
 	.f-control {
 		text-align: center;
-		width: 4rem;
+		width: calc(100% / 3 * 2);
 		height: 100%;
 	}
 	.qtt-btn-wrap {
-		width: 2rem;
+		width: calc(100% / 3 * 1);
 		height: 100%;
 		border-left: 1px solid $border-cl;
 	}
@@ -53,5 +53,8 @@
 		border: 0;
 		background-color: transparent;
 		font-weight: bold;
+	}
+	@include max-media($bk-d-992) {
+		width: 14rem;
 	}
 }

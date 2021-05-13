@@ -111,6 +111,15 @@
 			background-color: $main-cl;
 		}
 	}
+	&.btn-remove {
+		padding-left: 3rem;
+		padding-right: 3rem;
+		background-color: #fddfdf;
+		&:hover {
+			background-color: $main-cl;
+			color: $t-w-cl;
+		}
+	}
 }
 .hamburger-btn {
 	position: relative;
