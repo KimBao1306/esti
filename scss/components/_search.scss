@@ -118,6 +118,7 @@
 }
 /*SEARCH ITEM*/
 .c-search {
+	position: relative;
 	padding: 2rem 2.5rem;
 	.tt {
 		display: block;
@@ -128,6 +129,24 @@
 		font-weight: 600;
 		p:first-child {
 			margin-bottom: 0.6rem;
+		}
+	}
+	.add {
+		position: absolute;
+		top: 50%;
+		right: 3rem;
+		transform: translateY(-50%);
+		width: 3rem;
+		height: 3rem;
+		line-height: 3rem;
+		border: 1px solid $main-cl;
+		border-radius: 99rem;
+		text-align: center;
+		cursor: pointer;
+		transition: $t1;
+		&:hover {
+			background-color: $main-cl;
+			color: $t-w-cl;
 		}
 	}
 	@include max-media($bk-d-768) {

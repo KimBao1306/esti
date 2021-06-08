@@ -4299,6 +4299,7 @@ html .mfp-wrap {
 
 /*SEARCH ITEM*/
 .c-search {
+  position: relative;
   padding: 2rem 2.5rem;
 }
 
@@ -4314,6 +4315,28 @@ html .mfp-wrap {
 
 .c-search .desc p:first-child {
   margin-bottom: 0.6rem;
+}
+
+.c-search .add {
+  position: absolute;
+  top: 50%;
+  right: 3rem;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 3rem;
+  height: 3rem;
+  line-height: 3rem;
+  border: 1px solid #125daa;
+  border-radius: 99rem;
+  text-align: center;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.c-search .add:hover {
+  background-color: #125daa;
+  color: #fff;
 }
 
 @media screen and (max-width: 767px) {

@@ -21,6 +21,7 @@ import ChartModule from './modules/ChartModule.js';
 import CustomInputModule from './modules/CustomInputModule.js';
 import AccountModule from './modules/AccountModule.js';
 import IsotopeModule from './modules/IsotopeModule.js';
+import CartModule from './modules/CartModule.js';
 
 jQuery(document).ready(function ($) {
 	LoadingModule();
@@ -46,4 +47,5 @@ jQuery(document).ready(function ($) {
 	CustomInputModule();
 	AccountModule();
 	IsotopeModule();
+	CartModule();
 });
