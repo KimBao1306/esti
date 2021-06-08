@@ -349,7 +349,7 @@
 				bottom: 2rem;
 				height: 0.2rem;
 				width: 100%;
-				background-color: $t-w-cl;
+				background-color: $bg-w-cl;
 				transition: $t1;
 				@include hidden;
 			}
@@ -414,6 +414,7 @@
 		}
 	}
 }
+
 @include min-media($bk-1200) {
 	.big-dropdown {
 		position: static;
@@ -449,6 +450,20 @@
 			}
 		}
 	}
+	.header__list > .dropdown:not(.big-dropdown) > .sub-menu {
+		background-color: $bg-w-cl;
+		width: 100%;
+		min-width: 20rem;
+		width: max-content;
+		a {
+			height: auto;
+			padding: 1rem;
+			&:hover {
+				background-color: rgba($color: $bg-b-cl, $alpha: 0.05);
+			}
+		}
+	}
+
 	.sub-menu {
 		--x: -50%;
 		--y: 2rem;

@@ -19,6 +19,8 @@ import QuantityPickerModule from './modules/QuantityPickerModule.js';
 import PartnersModule from './modules/PartnersModule.js';
 import ChartModule from './modules/ChartModule.js';
 import CustomInputModule from './modules/CustomInputModule.js';
+import AccountModule from './modules/AccountModule.js';
+import IsotopeModule from './modules/IsotopeModule.js';
 
 jQuery(document).ready(function ($) {
 	LoadingModule();
@@ -42,4 +44,6 @@ jQuery(document).ready(function ($) {
 	PartnersModule();
 	ChartModule();
 	CustomInputModule();
+	AccountModule();
+	IsotopeModule();
 });

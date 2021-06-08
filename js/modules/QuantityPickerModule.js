@@ -43,6 +43,8 @@ export default function QuantityPickerModule() {
 			if ($(e.target).hasClass('qtt-up') || $(e.target).hasClass('qtt-down')) {
 				const valueItem = qttPicker(e.target);
 				calP(valueItem);
+				const input = $(e.target).closest('.qtt-picker').find('.qtt-input');
+				input.trigger('input');
 			}
 		});
 		//event cho input khi thay đổi

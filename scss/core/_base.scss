@@ -123,29 +123,32 @@ h6 {
 }
 // KHI ĐĂNG NHẬP VÀO WP ADMIN
 .admin-bar {
-	.header.--fixed {
+	.header.--fixed .header-bottom {
 		top: 32px;
 	}
 
 	@include max-media($bk-d-1200) {
 		.header__list-wrap {
 			top: 32px;
+			height: calc(var(--browser-vh, 1vh) * 100 - 32px);
 		}
 	}
 	@include max-media($bk-d-992) {
-		.header.--fixed {
+		.header.--fixed .header-bottom {
 			top: 46px;
-		}
+  }
 		.header__list-wrap {
 			top: 46px;
+			height: calc(var(--browser-vh, 1vh) * 100 - 46px);
 		}
 	}
 	@include max-media($bk-d-768) {
-		.header.--fixed {
+		.header.--fixed .header-bottom {
 			top: 0;
 
 			.header__list-wrap {
 				top: 0;
+				height: calc(var(--browser-vh, 1vh) * 100);
 			}
 		}
 	}

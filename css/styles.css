@@ -282,31 +282,34 @@ h6 a {
   }
 }
 
-.admin-bar .header.--fixed {
+.admin-bar .header.--fixed .header-bottom {
   top: 32px;
 }
 
 @media screen and (max-width: 1199px) {
   .admin-bar .header__list-wrap {
     top: 32px;
+    height: calc(var(--browser-vh, 1vh) * 100 - 32px);
   }
 }
 
 @media screen and (max-width: 991px) {
-  .admin-bar .header.--fixed {
+  .admin-bar .header.--fixed .header-bottom {
     top: 46px;
   }
   .admin-bar .header__list-wrap {
     top: 46px;
+    height: calc(var(--browser-vh, 1vh) * 100 - 46px);
   }
 }
 
 @media screen and (max-width: 767px) {
-  .admin-bar .header.--fixed {
+  .admin-bar .header.--fixed .header-bottom {
     top: 0;
   }
-  .admin-bar .header.--fixed .header__list-wrap {
+  .admin-bar .header.--fixed .header-bottom .header__list-wrap {
     top: 0;
+    height: calc(var(--browser-vh, 1vh) * 100);
   }
 }
 
@@ -1399,6 +1402,21 @@ h6 a {
   .big-dropdown li.current-menu-item > .sub-menu {
     opacity: 1;
     visibility: visible;
+  }
+  .header__list > .dropdown:not(.big-dropdown) > .sub-menu {
+    background-color: #fff;
+    width: 100%;
+    min-width: 20rem;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+  }
+  .header__list > .dropdown:not(.big-dropdown) > .sub-menu a {
+    height: auto;
+    padding: 1rem;
+  }
+  .header__list > .dropdown:not(.big-dropdown) > .sub-menu a:hover {
+    background-color: rgba(0, 0, 0, 0.05);
   }
   .sub-menu {
     --x: -50%;
@@ -5037,6 +5055,7 @@ html .mfp-wrap {
   -webkit-box-shadow: 1rem 1rem 3rem rgba(0, 0, 0, 0.16);
           box-shadow: 1rem 1rem 3rem rgba(0, 0, 0, 0.16);
   pointer-events: auto;
+  cursor: pointer;
 }
 
 .filter-mobile-wrap p {
@@ -6310,7 +6329,7 @@ html .mfp-wrap {
   max-width: 35%;
 }
 
-.news-dt-share-right a {
+.news-dt-share-right > * {
   vertical-align: middle;
   display: inline-block;
   padding: 1rem;
@@ -6319,7 +6338,7 @@ html .mfp-wrap {
   border-radius: 0.6rem;
 }
 
-.news-dt-share-right a:hover {
+.news-dt-share-right > *:hover {
   -webkit-box-shadow: inset 0.5rem 0.5rem 1rem #dfe3ea, inset -0.5rem -0.5rem 1rem #faffff;
           box-shadow: inset 0.5rem 0.5rem 1rem #dfe3ea, inset -0.5rem -0.5rem 1rem #faffff;
 }
