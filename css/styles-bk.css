@@ -4299,6 +4299,7 @@ html .mfp-wrap {
 
 /*SEARCH ITEM*/
 .c-search {
+  position: relative;
   padding: 2rem 2.5rem;
 }
 
@@ -4314,6 +4315,28 @@ html .mfp-wrap {
 
 .c-search .desc p:first-child {
   margin-bottom: 0.6rem;
+}
+
+.c-search .add {
+  position: absolute;
+  top: 50%;
+  right: 3rem;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 3rem;
+  height: 3rem;
+  line-height: 3rem;
+  border: 1px solid #125daa;
+  border-radius: 99rem;
+  text-align: center;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.c-search .add:hover {
+  background-color: #125daa;
+  color: #fff;
 }
 
 @media screen and (max-width: 767px) {
@@ -5420,7 +5443,7 @@ html .mfp-wrap {
   transition: 0.3s;
 }
 
-.c-pd-img img:last-child {
+.c-pd-img img:nth-child(2) {
   opacity: 0;
   visibility: hidden;
 }
@@ -5918,15 +5941,6 @@ html .mfp-wrap {
   width: 30rem;
 }
 
-.step-search-table .frame-table-body tr:last-child {
-  margin-bottom: 0;
-}
-
-.step-search-table .frame-table-body tr:last-child td {
-  padding: 0;
-  text-align: center;
-}
-
 @media screen and (max-width: 991px) {
   .step-search-table .frame-table-body tr:last-child {
     width: 100%;
@@ -5946,9 +5960,10 @@ html .mfp-wrap {
   }
 }
 
-.step-drop-file {
-  padding: 5rem;
+.step-drop-file > label {
   border: 1px dashed #125daa;
+  padding: 5rem;
+  display: block;
   cursor: pointer;
 }
 
@@ -5984,12 +5999,6 @@ html .mfp-wrap {
 .step-drop-file .dz-default.dz-message,
 .step-drop-file .dz-progress {
   display: none !important;
-}
-
-@media screen and (max-width: 767px) {
-  .step-drop-file {
-    padding: 1.5rem;
-  }
 }
 
 /*STEP NOTE*/
@@ -9131,6 +9140,35 @@ html .mfp-wrap {
     margin-top: 1rem;
     margin-left: 0;
   }
+}
+
+.cart-noti {
+  position: fixed;
+  bottom: 5rem;
+  right: 1.5rem;
+  z-index: 100;
+  max-width: 30rem;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  min-height: 5rem;
+  padding: 1rem;
+  text-align: center;
+  background-color: #fff;
+  border: 1px solid #125daa;
+  -webkit-transform: translateY(1rem);
+          transform: translateY(1rem);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.cart-noti.--active {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
 }
 
 .main-fast-order .banner-split .col {

@@ -432,12 +432,16 @@
 			background-size: cover;
 			background-position: right;
 			background-repeat: no-repeat;
-			> .sub-menu-wrap > ul {
-				width: 22rem;
-				padding: 4.5rem 0;
-				border-right: 1px solid $border-cl;
-				> li > a {
-					padding-right: 4rem;
+			> .sub-menu-wrap {
+				padding: 0 1.5rem;
+
+				> ul {
+					width: 22rem;
+					padding: 4.5rem 0;
+					border-right: 1px solid $border-cl;
+					> li > a {
+						padding-right: 4rem;
+					}
 				}
 			}
 		}
@@ -485,7 +489,6 @@
 		}
 		> .sub-menu-wrap {
 			max-width: 120rem;
-			padding: 0 1.5rem;
 			margin: auto;
 		}
 		a {

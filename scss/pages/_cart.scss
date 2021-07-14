@@ -40,3 +40,24 @@
 		}
 	}
 }
+
+.cart-noti {
+	position: fixed;
+	bottom: 5rem;
+	right: 1.5rem;
+	z-index: 100;
+	max-width: 30rem;
+	width: max-content;
+	min-height: 5rem;
+	padding: 1rem;
+	text-align: center;
+	background-color: $bg-w-cl;
+	border: 1px solid $main-cl;
+	transform: translateY(1rem);
+	transition: $t1;
+	@include hidden;
+	&.--active {
+		transform: translateY(0);
+		@include visible;
+	}
+}

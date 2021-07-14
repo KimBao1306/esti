@@ -33,25 +33,7 @@ export default function CustomInputModule() {
 		const previewImage = document.getElementById('js-avatar-preview');
 		uploadImage(inputFile, previewImage);
 	}
-	// UPLOAD BÁO GIÁ
-	if ($('.step-drop-file').length) {
-		Dropzone.autoDiscover = false;
-		$('.step-drop-file').dropzone({
-			url: '/file/post',
-			// method: '',
-			maxFiles: 1,
-			acceptedFiles: '.xls,  .xlsx, .xlsm',
-			addRemoveLinks: true,
-			autoProcessQueue: false, // this is important as you dont want form to be submitted unless you have clicked the submit button
-			autoDiscover: false,
-			init: function () {
-				this.on('maxfilesexceeded', function (file) {
-					this.removeAllFiles();
-					this.addFile(file);
-				});
-			},
-		});
-	}
+
 	// UPDATE ẢNH SẢN PHẨM BÁO GIÁ
 	if (
 		document.querySelectorAll('.js-order-upload-img-preview').length &&

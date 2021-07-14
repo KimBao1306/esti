@@ -378,23 +378,27 @@
 								</h3>
 								<div class="content">
 									<div class="step-search">
-										<div class="step-drop-file dropzone">
-											<div class="img">
-												<img src="images/icon-drop-file.png" alt="" />
-											</div>
-											<div class="step-drop-file-content dz-button">
-												<p class="tt-18 f-semibold t-uppercase --mb-20">
-													file dữ liệu yêu cầu
-												</p>
-												<p>
-													Tải file Excel Theo mẫu
-													<a href="#" download="">(Download mẫu)</a> Kéo thả
-													hoặc <span>chọn file</span> có sẵn từ máy tính
-												</p>
-											</div>
+										<div class="step-drop-file">
+											<label for="upload-excel">
+												<input type="file" hidden name="" id="upload-excel" />
+												<div class="img">
+													<img src="images/icon-drop-file.png" alt="" />
+												</div>
+												<div class="step-drop-file-content">
+													<p class="tt-18 f-semibold t-uppercase --mb-20">
+														file dữ liệu yêu cầu
+													</p>
+													<p>
+														Tải file Excel Theo mẫu
+														<a href="#" download="">(Download mẫu)</a> Kéo thả
+														hoặc <span>chọn file</span> có sẵn từ máy tính
+													</p>
+												</div>
+											</label>
 										</div>
 									</div>
 								</div>
+								<div class="upload-excel-wrap"></div>
 								<div class="frame-order-btn-next">
 									<a href="#" class="main-btn">bước tiếp theo</a>
 								</div>
@@ -878,8 +882,11 @@
 		<script src="js/libs/magnific-popup/jquery.magnific-popup.min.js"></script>
 		<!-- MFP - END-->
 		<!-- DROPZONE -->
-		<script src="js/libs/dropzone/dropzone.min.js"></script>
+		<!-- <script src="js/libs/dropzone/dropzone.min.js"></script> -->
 		<!-- DROPZONE - END -->
+		<!-- SHEETJS -->
+		<script src="js/libs/sheetjs/xlsx.full.min.js"></script>
+		<!-- SHEETJS - END -->
 		<!-- AOS -->
 		<script src="js/libs/aos/aos.js"></script>
 		<!-- AOS - END -->

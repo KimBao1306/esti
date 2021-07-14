@@ -102,7 +102,7 @@
 		}
 		img {
 			transition: $t1;
-			&:last-child {
+			&:nth-child(2) {
 				@include hidden;
 			}
 		}
